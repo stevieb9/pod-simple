@@ -367,9 +367,9 @@ sub _write_contents_middle {
       $name = $e->[0];
       $path = join( "/", '.', esc( @{$e->[3]} ) )
         . ($HTML_EXTENSION || $Pod::Simple::HTML::HTML_EXTENSION);
-      print $Contents qq{  <a href="$path">}, esc($name), "</a>&nbsp;&nbsp;\n";
+      print $Contents qq{  <dd><a href="$path">}, esc($name), "</a></dd>\n";
     }
-    print $Contents "</dd>\n\n";
+    print $Contents "\n\n";
   }
   return 1;
 }
